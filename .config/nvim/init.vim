@@ -14,5 +14,6 @@ Plug 'kien/ctrlp.vim'
 Plug 'derekwyatt/vim-scala'
 Plug 'rust-lang/rust.vim'
 Plug 'timonv/vim-cargo'
+Plug 'tpope/vim-surround'
 
 call plug#end()
