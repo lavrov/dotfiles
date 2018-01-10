@@ -8,12 +8,13 @@ set splitbelow
 set splitright
 
 call plug#begin('~/.local/share/nvim/plugged')
-
 Plug 'brooth/far.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'derekwyatt/vim-scala'
 Plug 'rust-lang/rust.vim'
 Plug 'timonv/vim-cargo'
 Plug 'tpope/vim-surround'
-
+Plug 'dracula/vim'
 call plug#end()
+
+colorscheme dracula
