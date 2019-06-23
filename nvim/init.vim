@@ -14,7 +14,5 @@ Plug 'derekwyatt/vim-scala'
 Plug 'rust-lang/rust.vim'
 Plug 'timonv/vim-cargo'
 Plug 'tpope/vim-surround'
-Plug 'dracula/vim'
 call plug#end()
 
-colorscheme dracula
