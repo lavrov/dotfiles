@@ -1,0 +1,8 @@
+alias g='git'
+alias gst='git status'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gl='git pull'
+alias gup='git pull --rebase'
+alias gp='git push'
+alias gd='git diff'
