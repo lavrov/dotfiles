@@ -1,10 +1,1 @@
-*
 
-!.gitignore
-
-!nvim
-!nvim/init.vim
-
-!fish
-!fish/conf.d
-!fish/conf.d/git-aliases.fish
