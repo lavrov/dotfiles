@@ -28,6 +28,8 @@
   #  pkgs.zoom-us
   #  pkgs.discord
     pkgs.teleport
+    pkgs.kubectl
+    pkgs.kubectx
   ];
 
   programs.git = {
