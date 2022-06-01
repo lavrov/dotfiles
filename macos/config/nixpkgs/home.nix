@@ -24,6 +24,10 @@
     pkgs.htop
     pkgs.jetbrains.idea-community
     pkgs.coursier
+    pkgs.slack
+  #  pkgs.zoom-us
+  #  pkgs.discord
+    pkgs.teleport
   ];
 
   programs.git = {
