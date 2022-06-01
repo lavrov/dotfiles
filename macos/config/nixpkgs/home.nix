@@ -70,4 +70,25 @@
       gpgconf --launch gpg-agent
     '';
   };
+
+  programs.zsh = {
+    enable = true;
+    enableAutosuggestions = true;
+    enableCompletion = true;
+
+    oh-my-zsh = {
+      enable = true;
+      theme = "refined";
+      plugins=[
+        "git"
+      # "tmux"
+      # "docker"
+      # "python"
+       "vi-mode"
+      # "systemd"
+       "z"
+      # "kubectl"
+      ];
+    };
+  };
 }
