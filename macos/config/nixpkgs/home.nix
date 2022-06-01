@@ -30,6 +30,7 @@
     pkgs.teleport
     pkgs.kubectl
     pkgs.kubectx
+    pkgs.jq
   ];
 
   programs.git = {
