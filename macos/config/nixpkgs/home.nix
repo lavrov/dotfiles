@@ -31,6 +31,7 @@
     pkgs.kubectl
     pkgs.kubectx
     pkgs.jq
+    pkgs.nodejs
   ];
 
   programs.git = {
