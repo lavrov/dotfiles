@@ -52,14 +52,6 @@
     enable = true;
   };
 
-  programs.java = {
-    enable = true;
-  };
-
-  programs.vscode = {
-    enable = true;
-  };
-
   programs.gpg = {
     enable = true;
     scdaemonSettings = {
@@ -103,5 +95,17 @@
       export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
       gpgconf --launch gpg-agent
     '';
+  };
+
+
+  programs.java.enable = true;
+  
+  programs.go = {
+    enable = true;
+    goPath = "go";
+  };
+
+  programs.vscode = {
+    enable = true;
   };
 }
