@@ -37,7 +37,11 @@
   programs.git = {
     enable = true;
     userName = "Vitaly Lavrov";
-    userEmail = "lavrovvv@gmail.com";
+    userEmail = "vitaly.lavrov@coralogix.com";
+    signing = {
+      key = "98C3927F192D545A";
+      signByDefault = true;
+    };
   };
 
   programs.neovim = {
@@ -99,6 +103,8 @@
 
 
   programs.java.enable = true;
+
+  programs.sbt.enable = true;
   
   programs.go = {
     enable = true;
