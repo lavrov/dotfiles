@@ -25,6 +25,7 @@
     pkgs.jetbrains.idea-community
     pkgs.coursier
     pkgs.slack
+  #  pkgs.spotify
   #  pkgs.zoom-us
   #  pkgs.discord
     pkgs.teleport
@@ -32,6 +33,8 @@
     pkgs.kubectx
     pkgs.jq
     pkgs.nodejs
+    pkgs.stern
+    pkgs.buf
   ];
 
   programs.git = {
