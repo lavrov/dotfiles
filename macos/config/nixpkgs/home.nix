@@ -20,9 +20,10 @@
   programs.home-manager.enable = true;
 
   # Packages that should be installed to the user profile.
+  # Commented packages are not yet available on amr64.
   home.packages = [
     pkgs.htop
-    pkgs.jetbrains.idea-community
+    pkgs.jetbrains.idea-ultimate
     pkgs.coursier
     pkgs.slack
   #  pkgs.spotify
@@ -32,9 +33,13 @@
     pkgs.kubectl
     pkgs.kubectx
     pkgs.jq
-    pkgs.nodejs
+  #  pkgs.nodejs-14_x
+    pkgs.python3
     pkgs.stern
     pkgs.buf
+  #  pkgs.scala-cli
+  #  pkgs.httpie
+    pkgs.grpcurl
   ];
 
   programs.git = {
@@ -104,6 +109,7 @@
     '';
   };
 
+  programs.direnv.enable = true;
 
   programs.java.enable = true;
 
