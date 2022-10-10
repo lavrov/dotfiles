@@ -27,7 +27,7 @@
     pkgs.coursier
     pkgs.slack
   #  pkgs.spotify
-  #  pkgs.zoom-us
+    pkgs.zoom-us
   #  pkgs.discord
   #  pkgs.vlc
     pkgs.teleport
