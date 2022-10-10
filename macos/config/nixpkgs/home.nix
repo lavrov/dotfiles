@@ -29,6 +29,7 @@
   #  pkgs.spotify
   #  pkgs.zoom-us
   #  pkgs.discord
+  #  pkgs.vlc
     pkgs.teleport
     pkgs.kubectl
     pkgs.kubectx
@@ -37,9 +38,11 @@
     pkgs.python3
     pkgs.stern
     pkgs.buf
-  #  pkgs.scala-cli
+    pkgs.scala-cli
   #  pkgs.httpie
     pkgs.grpcurl
+    pkgs.rustup
+    pkgs.mysql80
   ];
 
   programs.git = {
@@ -47,7 +50,7 @@
     userName = "Vitaly Lavrov";
     userEmail = "vitaly.lavrov@coralogix.com";
     signing = {
-      key = "98C3927F192D545A";
+      key = "39CC00C80DB85E36";
       signByDefault = true;
     };
   };
