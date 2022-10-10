@@ -34,12 +34,11 @@
     pkgs.kubectl
     pkgs.kubectx
     pkgs.jq
-  #  pkgs.nodejs-14_x
     pkgs.python3
     pkgs.stern
     pkgs.buf
     pkgs.scala-cli
-  #  pkgs.httpie
+    pkgs.httpie
     pkgs.grpcurl
     pkgs.rustup
     pkgs.mysql80
