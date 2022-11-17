@@ -42,6 +42,7 @@
     pkgs.grpcurl
     pkgs.rustup
     pkgs.mysql80
+    pkgs.visualvm
   ];
 
   programs.git = {
