@@ -43,6 +43,7 @@
     pkgs.rustup
     pkgs.mysql80
     pkgs.visualvm
+    pkgs.jprofiler
   ];
 
   programs.git = {
