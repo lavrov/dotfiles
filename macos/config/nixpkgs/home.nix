@@ -30,6 +30,7 @@
     pkgs.zoom-us
   #  pkgs.discord
   #  pkgs.vlc
+  #  pkgs.etcher
     pkgs.teleport
     pkgs.kubectl
     pkgs.kubectx
