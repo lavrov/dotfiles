@@ -45,6 +45,7 @@
     pkgs.mysql80
     pkgs.visualvm
     pkgs.jprofiler
+    pkgs.unar
   ];
 
   programs.git = {
