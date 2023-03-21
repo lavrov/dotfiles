@@ -46,6 +46,7 @@
     pkgs.visualvm
     pkgs.jprofiler
     pkgs.unar
+    pkgs.syncthing
   ];
 
   programs.git = {
