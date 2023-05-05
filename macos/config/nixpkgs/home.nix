@@ -47,6 +47,9 @@
     pkgs.jprofiler
     pkgs.unar
     pkgs.syncthing
+    pkgs.tree-sitter
+    pkgs.emscripten
+    pkgs.cmake
   ];
 
   programs.git = {
