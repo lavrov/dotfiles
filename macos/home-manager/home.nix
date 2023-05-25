@@ -60,6 +60,7 @@
     pkgs.tree-sitter
     pkgs.emscripten
     pkgs.cmake
+    pkgs.pre-commit
   ];
 
   programs.git = {
