@@ -24,6 +24,7 @@
   home.packages = [
     pkgs.htop
     pkgs.jetbrains.idea-ultimate
+    pkgs.jetbrains.clion
     pkgs.coursier
     pkgs.slack
     pkgs.spotify
