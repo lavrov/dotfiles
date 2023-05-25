@@ -22,16 +22,26 @@
   # Packages that should be installed to the user profile.
   # Commented packages are not yet available on amr64.
   home.packages = [
+
+    # utils
     pkgs.htop
-    pkgs.jetbrains.idea-ultimate
-    pkgs.jetbrains.clion
-    pkgs.coursier
+    pkgs.unar
+  #  pkgs.etcher
+  #  pkgs.vlc
+
+
+    # communication tools
     pkgs.slack
     pkgs.spotify
     pkgs.zoom-us
     pkgs.discord
-  #  pkgs.vlc
-  #  pkgs.etcher
+
+    # editors & IDEs
+    pkgs.jetbrains.idea-ultimate
+    pkgs.jetbrains.clion
+
+    # dev tools
+    pkgs.coursier
     pkgs.teleport
     pkgs.kubectl
     pkgs.kubectx
@@ -46,7 +56,6 @@
     pkgs.mysql80
     pkgs.visualvm
     pkgs.jprofiler
-    pkgs.unar
     pkgs.syncthing
     pkgs.tree-sitter
     pkgs.emscripten
