@@ -41,7 +41,7 @@
 
     # editors & IDEs
     pkgs.jetbrains.idea-ultimate
-    pkgs.jetbrains.clion
+    # pkgs.jetbrains.clion
 
     # dev tools
     pkgs.coursier
