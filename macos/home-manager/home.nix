@@ -29,10 +29,13 @@
   #  pkgs.etcher
   #  pkgs.vlc
 
+    # private cloud
+    pkgs.syncthing
+
 
     # communication tools
     pkgs.slack
-    pkgs.spotify
+    # pkgs.spotify
     pkgs.zoom-us
     pkgs.discord
 
@@ -49,6 +52,7 @@
     pkgs.python3
     pkgs.stern
     pkgs.buf
+    pkgs.scala
     pkgs.scala-cli
     pkgs.httpie
     pkgs.grpcurl
@@ -56,7 +60,6 @@
     pkgs.mysql80
     pkgs.visualvm
     pkgs.jprofiler
-    pkgs.syncthing
     pkgs.tree-sitter
     pkgs.emscripten
     pkgs.cmake
