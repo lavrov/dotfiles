@@ -35,13 +35,14 @@
 
     # communication tools
     pkgs.slack
-    # pkgs.spotify
     pkgs.zoom-us
     pkgs.discord
 
+    # organizers
+  #  pkgs.notion
+
     # editors & IDEs
     pkgs.jetbrains.idea-ultimate
-    # pkgs.jetbrains.clion
 
     # dev tools
     pkgs.coursier
