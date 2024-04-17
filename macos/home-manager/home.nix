@@ -26,6 +26,7 @@
     # utils
     pkgs.htop
     pkgs.unar
+    pkgs.unrar
   #  pkgs.etcher
   #  pkgs.vlc
 
@@ -43,6 +44,7 @@
 
     # editors & IDEs
     pkgs.jetbrains.idea-ultimate
+    pkgs.jetbrains.rust-rover
 
     # dev tools
     pkgs.coursier
