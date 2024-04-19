@@ -42,6 +42,9 @@
     # organizers
   #  pkgs.notion
 
+    # programming languages
+    pkgs.unison-ucm
+
     # editors & IDEs
     pkgs.jetbrains.idea-ultimate
     pkgs.jetbrains.rust-rover
@@ -85,6 +88,9 @@
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
+    plugins = with pkgs.vimPlugins; [
+      unison
+    ];
   };
 
   # programs.firefox = {
