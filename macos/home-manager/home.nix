@@ -77,8 +77,8 @@
     userName = "Vitaly Lavrov";
     userEmail = "vitaly.lavrov@coralogix.com";
     signing = {
-      key = "39CC00C80DB85E36";
-      signByDefault = true;
+      key = "E9E1594AB84DF9D0";
+      signByDefault = false;
     };
   };
 
