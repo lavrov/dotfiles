@@ -27,11 +27,12 @@
     pkgs.htop
     pkgs.unar
     pkgs.unrar
+    pkgs.stats
   #  pkgs.etcher
   #  pkgs.vlc
 
     # private cloud
-    pkgs.syncthing
+    # pkgs.syncthing
 
 
     # communication tools
