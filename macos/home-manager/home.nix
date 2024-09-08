@@ -64,13 +64,15 @@
     pkgs.httpie
     pkgs.grpcurl
     pkgs.rustup
-    pkgs.mysql80
     pkgs.visualvm
     pkgs.jprofiler
     pkgs.tree-sitter
     pkgs.emscripten
     pkgs.cmake
     pkgs.pre-commit
+
+    # virtualization
+    pkgs.utm
   ];
 
   programs.git = {
