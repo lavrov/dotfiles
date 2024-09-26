@@ -28,8 +28,8 @@
     pkgs.unar
     pkgs.unrar
     pkgs.stats
-  #  pkgs.etcher
-  #  pkgs.vlc
+    # pkgs.etcher
+    # pkgs.vlc
 
     # private cloud
     # pkgs.syncthing
@@ -41,9 +41,13 @@
     pkgs.discord
 
     # organizers
-  #  pkgs.notion
+    # pkgs.notion
 
     # programming languages
+    pkgs.scala
+    pkgs.scala-cli
+    pkgs.python3
+    pkgs.rustup
     pkgs.unison-ucm
 
     # editors & IDEs
@@ -56,14 +60,10 @@
     pkgs.kubectl
     pkgs.kubectx
     pkgs.jq
-    pkgs.python3
     pkgs.stern
     pkgs.buf
-    pkgs.scala
-    pkgs.scala-cli
     pkgs.httpie
     pkgs.grpcurl
-    pkgs.rustup
     pkgs.visualvm
     pkgs.jprofiler
     pkgs.tree-sitter
@@ -72,7 +72,7 @@
     pkgs.pre-commit
 
     # virtualization
-    pkgs.utm
+    # pkgs.utm
   ];
 
   programs.git = {
