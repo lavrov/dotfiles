@@ -44,8 +44,7 @@
     # pkgs.notion
 
     # programming languages
-    pkgs.scala
-    pkgs.scala-cli
+    pkgs.scala-next
     pkgs.python3
     pkgs.rustup
     pkgs.unison-ucm
