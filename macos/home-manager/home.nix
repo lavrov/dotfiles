@@ -61,7 +61,7 @@
     pkgs.kubectx
     pkgs.jq
     pkgs.stern
-    pkgs.buf
+    #pkgs.buf
     pkgs.httpie
     pkgs.grpcurl
     pkgs.visualvm
@@ -169,6 +169,6 @@
   };
 
   programs.vscode = {
-    enable = true;
+    enable = false;
   };
 }
