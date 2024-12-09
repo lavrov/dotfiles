@@ -1,13 +1,22 @@
 {
-  description = "NixOS configuration with flakes";
-  inputs.nixos-hardware.url = github:NixOS/nixos-hardware/master;
+  description = "Home Manager configuration";
 
-  outputs = { self, nixpkgs, nixos-hardware }: {
-    nixosConfigurations.dell-xps-9310 = nixpkgs.lib.nixosSystem {
-      modules = [
-        nixos-hardware.nixosModules.dell-xps-13-9310
-      ];
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-}
 
+  outputs = { nixpkgs, home-manager, ... }:
+    let
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+    in {
+      homeConfigurations."vitaly@framework-13" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [ ./home/framework-13.nix ];
+      };
+    };
+}

@@ -1,0 +1,71 @@
+{ config, pkgs, ... }:
+
+{
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
+    plugins = with pkgs.vimPlugins; [
+      unison
+    ];
+    coc = {
+      enable = true;
+      settings = {
+        languageserver = {
+	  unison = {
+	    filetypes = ["unison"];
+	    host = "127.0.0.1";
+	    port = 5757;
+	    settings = {};
+	  };
+	};
+      };
+    };
+    extraLuaConfig = ''
+      -- Normal mode -> command mode re-mapping for semicolon (;)
+      vim.keymap.set('n', ';', ':', {})
+    '';
+  };
+
+  programs.password-store = {
+    enable = true;
+    package = pkgs.pass.withExtensions (exts: [ exts.pass-otp ]);
+  };
+
+  programs.gpg = {
+    enable = true;
+    scdaemonSettings = {
+      disable-ccid = true;
+    };
+  };
+
+  programs.bat = {
+    enable = true;
+  };
+
+  programs.zsh = {
+    enable = true;
+    autosuggestion = {
+      enable = true;
+    };
+
+    enableCompletion = true;
+
+    oh-my-zsh = {
+      enable = true;
+      theme = "refined";
+      plugins=[
+       "git"
+       "vi-mode"
+       "z"
+      ];
+    };
+
+    initExtra = ''
+      export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+      gpgconf --launch gpg-agent
+    '';
+  };
+}
