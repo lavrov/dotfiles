@@ -29,4 +29,8 @@
     userName = "Vitaly Lavrov";
     userEmail = "lavrovvv@gmail.com";
   };
+
+  home.packages = [
+    pkgs.jetbrains.idea-community
+  ];
 }
