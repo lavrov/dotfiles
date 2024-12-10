@@ -40,6 +40,9 @@
     pkgs.zoom-us
     pkgs.discord
 
+    # entertainment
+    pkgs.spotify
+
     # organizers
     # pkgs.notion
 
