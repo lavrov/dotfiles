@@ -30,6 +30,15 @@
     userEmail = "lavrovvv@gmail.com";
   };
 
+  # Remove SSH_AUTH_SOCK before home-manager will attempt to set it
+  home.sessionVariablesExtra = ''
+    unset SSH_AUTH_SOCK
+  '';
+
+  services.gpg-agent = {
+    pinentryPackage = pkgs.pinentry-qt;
+  };
+
   home.packages = [
     pkgs.jetbrains.idea-community
   ];

@@ -41,6 +41,11 @@
     };
   };
 
+  services.gpg-agent = {
+    enable = true;
+    enableSshSupport = true;
+  };
+
   programs.bat = {
     enable = true;
   };
@@ -62,10 +67,5 @@
        "z"
       ];
     };
-
-    initExtra = ''
-      export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-      gpgconf --launch gpg-agent
-    '';
   };
 }
