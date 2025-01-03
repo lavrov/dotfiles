@@ -54,7 +54,7 @@
 
     # editors & IDEs
     pkgs.jetbrains.idea-ultimate
-    pkgs.jetbrains.rust-rover
+    pkgs.jetbrains.webstorm
 
     # dev tools
     pkgs.coursier
@@ -63,7 +63,7 @@
     pkgs.kubectx
     pkgs.jq
     pkgs.stern
-    #pkgs.buf
+    pkgs.buf
     pkgs.httpie
     pkgs.grpcurl
     pkgs.visualvm
