@@ -2,6 +2,13 @@
 
 {
   programs = {
+
+    git = {
+      enable = true;
+      userName = "Vitaly Lavrov";
+      userEmail = "lavrovvv@gmail.com";
+    };
+
     neovim = {
       enable = true;
       defaultEditor = true;

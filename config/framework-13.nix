@@ -24,12 +24,6 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  programs.git = {
-    enable = true;
-    userName = "Vitaly Lavrov";
-    userEmail = "lavrovvv@gmail.com";
-  };
-
   # Remove SSH_AUTH_SOCK before home-manager will attempt to set it
   home.sessionVariablesExtra = ''
     unset SSH_AUTH_SOCK
