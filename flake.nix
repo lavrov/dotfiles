@@ -16,7 +16,7 @@
     in {
       homeConfigurations."vitaly@framework-13" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./home/framework-13.nix ];
+        modules = [ ./config/framework-13.nix ];
       };
     };
 }
