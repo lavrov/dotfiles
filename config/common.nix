@@ -16,21 +16,7 @@
       vimAlias = true;
       vimdiffAlias = true;
       plugins = with pkgs.vimPlugins; [
-        unison
       ];
-      coc = {
-        enable = true;
-        settings = {
-          languageserver = {
-              unison = {
-                filetypes = ["unison"];
-                host = "127.0.0.1";
-                port = 5757;
-                settings = {};
-              };
-  	      };
-        };
-      };
       extraLuaConfig = ''
         -- Normal mode -> command mode re-mapping for semicolon (;)
         vim.keymap.set('n', ';', ':', {})
