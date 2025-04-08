@@ -63,6 +63,7 @@
     pkgs.kubectx
     pkgs.jq
     pkgs.stern
+    pkgs.protobuf
     pkgs.buf
     pkgs.httpie
     pkgs.grpcurl
@@ -72,6 +73,8 @@
     pkgs.emscripten
     pkgs.cmake
     pkgs.pre-commit
+    pkgs.docker-compose
+    pkgs.awscli2
 
     # virtualization
     # pkgs.utm
