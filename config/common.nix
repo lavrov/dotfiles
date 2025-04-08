@@ -75,6 +75,10 @@
         vim.keymap.set('n', ';', ':', {})
       '';
     };
+
+    zed-editor = {
+      enable = true;
+    };
   };
 
   services = {
