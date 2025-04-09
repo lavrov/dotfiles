@@ -78,6 +78,9 @@
 
     # virtualization
     # pkgs.utm
+
+    # LLM
+    pkgs.ollama
   ];
 
   programs.git = {
