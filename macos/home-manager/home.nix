@@ -78,9 +78,6 @@
 
     # virtualization
     # pkgs.utm
-
-    # LLM
-    pkgs.ollama
   ];
 
   programs.git = {
@@ -166,5 +163,9 @@
 
   programs.vscode = {
     enable = false;
+  };
+
+  services.ollama = {
+    enable = true;
   };
 }
