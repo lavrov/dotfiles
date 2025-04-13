@@ -33,6 +33,11 @@
     pinentryPackage = pkgs.pinentry-qt;
   };
 
+  services.ollama = {
+    enable = true;
+    acceleration = "rocm";
+  };
+
   home.packages = [
     pkgs.wireguard-tools
     pkgs.jetbrains.idea-community

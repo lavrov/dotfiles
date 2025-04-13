@@ -80,13 +80,4 @@
       enable = true;
     };
   };
-
-  services = {
-    ollama = {
-      enable = true;
-    };
-  };
-
-
-  home.packages = [];
 }
