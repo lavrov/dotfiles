@@ -106,9 +106,9 @@
     enable = true;
   };
 
-  # programs.firefox = {
-  #   enable = true;
-  # };
+  programs.firefox = {
+    enable = true;
+  };
 
   programs.password-store = {
     enable = true;
