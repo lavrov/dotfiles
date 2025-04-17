@@ -31,10 +31,6 @@
     # pkgs.etcher
     # pkgs.vlc
 
-    # private cloud
-    # pkgs.syncthing
-
-
     # communication tools
     pkgs.slack
     pkgs.zoom-us
@@ -76,8 +72,8 @@
     pkgs.docker-compose
     pkgs.awscli2
 
-    # virtualization
-    # pkgs.utm
+    # AI & LLM
+    pkgs.fabric-ai
   ];
 
   programs.git = {
