@@ -57,6 +57,7 @@
     pkgs.teleport
     pkgs.kubectl
     pkgs.kubectx
+    pkgs.k9s
     pkgs.jq
     pkgs.stern
     pkgs.protobuf
