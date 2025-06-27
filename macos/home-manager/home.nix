@@ -64,13 +64,7 @@
     pkgs.buf
     pkgs.httpie
     pkgs.grpcurl
-    pkgs.visualvm
-    pkgs.jprofiler
-    pkgs.tree-sitter
-    pkgs.emscripten
-    pkgs.cmake
     pkgs.pre-commit
-    pkgs.docker-compose
     pkgs.awscli2
 
     # AI & LLM
