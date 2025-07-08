@@ -30,7 +30,9 @@
   '';
 
   services.gpg-agent = {
-    pinentryPackage = pkgs.pinentry-qt;
+    pinentry = {
+      package = pkgs.pinentry-qt;
+    };
   };
 
   services.ollama = {
