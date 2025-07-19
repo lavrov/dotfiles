@@ -37,7 +37,7 @@
     pkgs.discord
 
     # entertainment
-    # pkgs.spotify
+    pkgs.spotify
 
     # organizers
     # pkgs.notion
