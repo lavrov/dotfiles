@@ -69,6 +69,7 @@
 
     # AI & LLM
     pkgs.fabric-ai
+    pkgs.gemini-cli
   ];
 
   programs.git = {
