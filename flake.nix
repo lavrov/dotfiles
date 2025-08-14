@@ -9,18 +9,16 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
-    let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
-    in {
-      homeConfigurations."vitaly@framework-13" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [ ./config/framework-13.nix ];
+  outputs = { nixpkgs, home-manager, ... }: {
+    homeConfigurations = {
+      "vitaly@framework-13" = home-manager.lib.homeManagerConfiguration {
+        pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
+        modules = [ ./home/framework-13.nix ];
       };
-      homeConfigurations."coralogix" = home-manager.lib.homeManagerConfiguration {
+      "coralogix" = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs { system = "aarch64-darwin"; config.allowUnfree = true; };
-        modules = [ ./config/macbook.nix ];
+        modules = [ ./home/macbook.nix ];
       };
     };
+  };
 }

@@ -2,8 +2,12 @@
 
 {
 
+  home.stateVersion = "25.11";
+
   # essentials
   programs = {
+
+    home-manager.enable = true;
 
     zsh = {
       enable = true;
@@ -55,6 +59,9 @@
     gpg-agent = {
       enable = true;
       enableSshSupport = true;
+    };
+    ollama = {
+      enable = true;
     };
   };
 
