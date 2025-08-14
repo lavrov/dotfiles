@@ -18,5 +18,9 @@
         inherit pkgs;
         modules = [ ./config/framework-13.nix ];
       };
+      homeConfigurations."coralogix" = home-manager.lib.homeManagerConfiguration {
+        pkgs = import nixpkgs { system = "aarch64-darwin"; config.allowUnfree = true; };
+        modules = [ ./config/macbook.nix ];
+      };
     };
 }
