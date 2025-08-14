@@ -28,6 +28,13 @@
   home.sessionVariablesExtra = ''
     unset SSH_AUTH_SOCK
   '';
+  programs = {
+    git = {
+      enable = true;
+      userName = "Vitaly Lavrov";
+      userEmail = "lavrovvv@gmail.com";
+    };
+  };
 
   services.gpg-agent = {
     pinentry = {

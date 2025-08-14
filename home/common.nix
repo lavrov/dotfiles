@@ -30,8 +30,6 @@
 
     git = {
       enable = true;
-      userName = "Vitaly Lavrov";
-      userEmail = "lavrovvv@gmail.com";
     };
 
     password-store = {
