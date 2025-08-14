@@ -87,4 +87,11 @@
       enable = true;
     };
   };
+
+  # desktop
+  programs = {
+    firefox = {
+      enable = true;
+    };
+  };
 }
