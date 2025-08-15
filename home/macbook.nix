@@ -24,6 +24,7 @@
     # utils
     pkgs.htop
     pkgs.stats
+    pkgs.pritunl-client
 
     # communication tools
     pkgs.slack
@@ -39,6 +40,7 @@
     pkgs.scala-next
     pkgs.python3
     pkgs.rustup
+    pkgs.nodejs_22
 
     # editors & IDEs
     pkgs.jetbrains.idea-ultimate
