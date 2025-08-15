@@ -24,7 +24,7 @@
     # utils
     pkgs.htop
     pkgs.stats
-    pkgs.pritunl-client
+    # pkgs.pritunl-client
 
     # communication tools
     pkgs.slack
