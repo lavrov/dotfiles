@@ -38,6 +38,7 @@
 
     # programming languages
     pkgs.scala-next
+    pkgs.sbt
     pkgs.python3
     pkgs.rustup
     pkgs.nodejs_22
