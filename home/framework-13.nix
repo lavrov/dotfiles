@@ -21,6 +21,12 @@
         PasswordManagerEnabled = false;
       };
     };
+    browserpass = {
+      enable = true;
+      browsers = [
+        "firefox"
+      ];
+    };
   };
 
   # Remove SSH_AUTH_SOCK before home-manager will attempt to set it
