@@ -26,6 +26,11 @@
          "z"
         ];
       };
+
+      shellAliases = {
+        switch = "cd ~/workspace/github.com/lavrov/dotfiles && home-manager switch --flake .";
+        flake-update = "cd ~/workspace/github.com/lavrov/dotfiles && nix flake update";
+      };
     };
 
     git = {
