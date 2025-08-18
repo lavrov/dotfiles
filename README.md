@@ -8,3 +8,7 @@ Codify everything!
        nix run home-manager/master -- switch --flake .
 
     This will install `home-manager` command on the host.
+
+4. The following aliases are available for convenient usage:
+   - `switch`: apply changes to your home manager configuration
+   - `flake-update`: update nix flake dependencies
