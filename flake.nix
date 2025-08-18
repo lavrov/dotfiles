@@ -19,6 +19,10 @@
         pkgs = import nixpkgs { system = "aarch64-darwin"; config.allowUnfree = true; };
         modules = [ ./home/macbook.nix ];
       };
+      "vitaly@macbook-pro" = home-manager.lib.homeManagerConfiguration {
+        pkgs = import nixpkgs { system = "aarch64-darwin"; config.allowUnfree = true; };
+        modules = [ ./home/vitaly-macbook-pro.nix ];
+      };
     };
   };
 }
