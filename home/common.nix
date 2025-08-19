@@ -95,6 +95,13 @@
   programs = {
     firefox = {
       enable = true;
+      policies = {
+        DisablePasswordManager = true;
+      };
+    };
+    browserpass = {
+      enable = true;
+      browsers = ["firefox"];
     };
   };
 }
