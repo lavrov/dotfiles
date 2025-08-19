@@ -45,6 +45,7 @@
     pkgs.kubectx
     pkgs.k9s
     pkgs.jq
+    pkgs.k3d
 
     # AI & LLM
     pkgs.gemini-cli
