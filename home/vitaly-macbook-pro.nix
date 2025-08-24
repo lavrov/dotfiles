@@ -46,6 +46,7 @@
     pkgs.k9s
     pkgs.jq
     pkgs.k3d
+    pkgs.docker
 
     # AI & LLM
     pkgs.gemini-cli
