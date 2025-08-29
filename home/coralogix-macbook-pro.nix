@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, protofetch, ... }:
 
 {
 
@@ -59,6 +59,7 @@
     pkgs.grpcurl
     pkgs.pre-commit
     pkgs.awscli2
+    protofetch.packages.${pkgs.system}.default
 
     # AI & LLM
     pkgs.gemini-cli
