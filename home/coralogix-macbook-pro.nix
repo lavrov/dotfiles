@@ -62,5 +62,6 @@
 
     # AI & LLM
     pkgs.gemini-cli
+    pkgs.goose-cli
   ];
 }
