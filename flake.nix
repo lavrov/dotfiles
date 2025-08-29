@@ -8,7 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     protofetch = {
-      url = "github:lavrov/protofetch";
+      url = "github:coralogix/protofetch";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
