@@ -59,6 +59,7 @@
     pkgs.grpcurl
     pkgs.pre-commit
     pkgs.awscli2
+    pkgs.docker
     protofetch.packages.${pkgs.system}.default
 
     # AI & LLM
