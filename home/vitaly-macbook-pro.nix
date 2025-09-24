@@ -24,6 +24,7 @@
     # utils
     pkgs.htop
     pkgs.stats
+    pkgs.yubikey-manager
 
     # communication tools
     pkgs.discord
