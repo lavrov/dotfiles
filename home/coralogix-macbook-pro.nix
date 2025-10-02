@@ -45,7 +45,6 @@
 
     # editors & IDEs
     pkgs.jetbrains.idea-ultimate
-    pkgs.jetbrains.webstorm
 
     # dev tools
     pkgs.teleport
@@ -63,7 +62,6 @@
     protofetch.packages.${pkgs.system}.default
 
     # AI & LLM
-    pkgs.gemini-cli
     pkgs.goose-cli
   ];
 }
