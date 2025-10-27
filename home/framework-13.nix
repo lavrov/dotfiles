@@ -36,8 +36,12 @@
   programs = {
     git = {
       enable = true;
-      userName = "Vitaly Lavrov";
-      userEmail = "lavrovvv@gmail.com";
+      settings = {
+        user = {
+          name = "Vitaly Lavrov";
+          email = "lavrovvv@gmail.com";
+        };
+      };
     };
   };
 

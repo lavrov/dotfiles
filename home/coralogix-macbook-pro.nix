@@ -11,8 +11,12 @@
 
   programs.git = {
     enable = true;
-    userName = "Vitaly Lavrov";
-    userEmail = "vitaly.lavrov@coralogix.com";
+    settings = {
+      user = {
+        name = "Vitaly Lavrov";
+        email = "vitaly.lavrov@coralogix.com";
+      };
+    };
     signing = {
       key = "EBB3F3ECCC29C9F5";
       signByDefault = true;
