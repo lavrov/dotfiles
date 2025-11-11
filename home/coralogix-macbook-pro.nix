@@ -46,6 +46,7 @@
     pkgs.python3
     pkgs.rustup
     pkgs.nodejs_22
+    pkgs.pnpm
 
     # editors & IDEs
     pkgs.jetbrains.idea-ultimate
