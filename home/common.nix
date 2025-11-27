@@ -64,7 +64,7 @@
       enableSshSupport = true;
     };
     ollama = {
-      enable = true;
+      enable = false;
     };
   };
 
