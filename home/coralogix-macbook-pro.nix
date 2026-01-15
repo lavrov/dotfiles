@@ -55,6 +55,7 @@
     pkgs.teleport
     pkgs.kubectl
     pkgs.kubectx
+    pkgs.argo-rollouts
     pkgs.k9s
     pkgs.jq
     pkgs.stern
