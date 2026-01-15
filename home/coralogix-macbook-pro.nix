@@ -69,5 +69,6 @@
 
     # AI & LLM
     pkgs.goose-cli
+    pkgs.claude-code
   ];
 }
