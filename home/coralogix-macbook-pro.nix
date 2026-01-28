@@ -62,7 +62,7 @@
     pkgs.protobuf
     pkgs.buf
     pkgs.grpcurl
-    pkgs.pre-commit
+    # pkgs.pre-commit  # commented out due to Swift build failure on darwin (https://github.com/NixOS/nixpkgs/issues/483584)
     pkgs.awscli2
     pkgs.docker
     protofetch.packages.${pkgs.system}.default
