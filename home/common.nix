@@ -80,7 +80,7 @@
       vimdiffAlias = true;
       plugins = with pkgs.vimPlugins; [
       ];
-      extraLuaConfig = ''
+      initLua = ''
         -- Normal mode -> command mode re-mapping for semicolon (;)
         vim.keymap.set('n', ';', ':', {})
       '';
