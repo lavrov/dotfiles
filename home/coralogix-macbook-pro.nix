@@ -49,7 +49,7 @@
     pkgs.pnpm
 
     # editors & IDEs
-    pkgs.jetbrains.idea-ultimate
+    pkgs.jetbrains.idea
 
     # dev tools
     pkgs.teleport
