@@ -49,7 +49,7 @@
     pkgs.nodejs_22
 
     # editors & IDEs
-    pkgs.jetbrains.idea-community
+    pkgs.jetbrains.idea
 
     # dev tools
     pkgs.kubectl
