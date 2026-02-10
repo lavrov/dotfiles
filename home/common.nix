@@ -29,6 +29,7 @@
 
       shellAliases = {
         oc = "opencode";
+	k = "kubectl";
       };
     };
 
