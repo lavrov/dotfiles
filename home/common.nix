@@ -64,7 +64,10 @@
       enableSshSupport = true;
     };
     ollama = {
-      enable = false;
+      enable = true;
+      environmentVariables = {
+        OLLAMA_CONTEXT_LENGTH = "65536";
+      };
     };
   };
 

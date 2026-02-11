@@ -51,10 +51,7 @@
     };
   };
 
-  services.ollama = {
-    enable = true;
-    acceleration = "rocm";
-  };
+  services.ollama.acceleration = "rocm";
 
   home.packages = [
     pkgs.wireguard-tools
