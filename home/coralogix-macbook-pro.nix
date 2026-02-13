@@ -68,8 +68,7 @@
     protofetch.packages.${pkgs.system}.default
 
     # AI & LLM
-    pkgs.goose-cli
-    pkgs.claude-code
     pkgs.opencode
+    pkgs.jan
   ];
 }
