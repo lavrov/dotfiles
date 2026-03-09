@@ -47,6 +47,7 @@
     pkgs.rustup
     pkgs.nodejs_24
     pkgs.pnpm
+    pkgs.bun
 
     # editors & IDEs
     pkgs.jetbrains.idea
