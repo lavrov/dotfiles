@@ -4,6 +4,7 @@
 
   imports = [
     ./common.nix
+    ./darwin-common.nix
   ];
 
   home.username = "coralogix";
