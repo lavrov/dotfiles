@@ -3,5 +3,9 @@
 {
   programs.ghostty = {
     package = pkgs.ghostty-bin;
+    enableZshIntegration = true;
+    settings = {
+      font-size = 16;
+    };
   };
 }
