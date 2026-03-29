@@ -114,4 +114,11 @@
       browsers = ["firefox"];
     };
   };
+
+  # desktop
+  programs = {
+    opencode = {
+      enable = true;
+    };
+  };
 }

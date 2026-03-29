@@ -70,7 +70,6 @@
     protofetch.packages.${pkgs.system}.default
 
     # AI & LLM
-    pkgs.opencode
     pkgs.jan
   ];
 }
