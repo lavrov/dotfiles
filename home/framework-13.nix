@@ -55,8 +55,7 @@
 
   home.packages = [
     pkgs.wireguard-tools
-    pkgs.jetbrains.idea-community
-    pkgs.android-studio
+    pkgs.jetbrains.idea-oss
     pkgs.protonmail-desktop
   ];
 }
