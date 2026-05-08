@@ -35,6 +35,9 @@
 
     git = {
       enable = true;
+      ignores = [
+        ".opencode"
+      ];
     };
 
     ghostty = {
