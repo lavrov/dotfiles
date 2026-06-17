@@ -49,6 +49,7 @@
     pkgs.nodejs_24
     pkgs.pnpm
     pkgs.bun
+    pkgs.go
 
     # editors & IDEs
     pkgs.jetbrains.idea
