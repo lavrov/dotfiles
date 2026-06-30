@@ -28,7 +28,7 @@
       };
 
       shellAliases = {
-        oc = "opencode";
+        oc = "opencode-cli";
 	k = "kubectl";
       };
     };
@@ -119,6 +119,13 @@
   programs = {
     opencode = {
       enable = true;
+      package = pkgs.symlinkJoin {
+        name = "opencode-cli";
+        paths = [ pkgs.opencode ]; 
+        postBuild = ''
+          ln -s $out/bin/opencode $out/bin/opencode-cli
+        '';
+      };
     };
   };
 }

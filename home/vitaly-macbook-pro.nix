@@ -60,7 +60,8 @@
     pkgs.k3d
     pkgs.docker
 
-    # AI & LLM
-    pkgs.opencode
-  ];
+     # AI & LLM
+     pkgs.opencode
+     pkgs.opencode-desktop
+    ];
 }

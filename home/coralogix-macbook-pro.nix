@@ -70,7 +70,8 @@
     pkgs.docker
     protofetch.packages.${pkgs.system}.default
 
-    # AI & LLM
-    pkgs.jan
-  ];
+     # AI & LLM
+     pkgs.opencode-desktop
+     pkgs.jan
+    ];
 }
