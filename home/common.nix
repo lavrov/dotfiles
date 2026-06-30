@@ -40,6 +40,13 @@
       ];
     };
 
+    gh = {
+      enable = true;
+      settings = {
+        git_protocol = "ssh";
+      };
+    };
+
     ghostty = {
       enable = true;
     };
