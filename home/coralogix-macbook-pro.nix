@@ -28,7 +28,7 @@
 
     # utils
     pkgs.htop
-    pkgs.stats
+    # pkgs.stats
     # pkgs.pritunl-client
 
     # communication tools
