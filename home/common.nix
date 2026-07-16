@@ -80,7 +80,7 @@
     ollama = {
       enable = true;
       environmentVariables = {
-        OLLAMA_CONTEXT_LENGTH = "65536";
+        OLLAMA_CONTEXT_LENGTH = "200000";
       };
     };
   };
