@@ -15,9 +15,13 @@
       url = "github:anomalyco/opencode";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    codebase-memory-mcp = {
+      url = "github:DeusData/codebase-memory-mcp";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, protofetch, opencode, ... }: {
+  outputs = { nixpkgs, home-manager, protofetch, opencode, codebase-memory-mcp, ... }: {
     homeConfigurations = {
       "vitaly@framework-13" = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
@@ -27,7 +31,12 @@
         pkgs = import nixpkgs {
           system = "aarch64-darwin";
           config.allowUnfree = true;
-          overlays = [ opencode.overlays.default ];
+          overlays = [
+            opencode.overlays.default
+            (final: prev: {
+              codebase-memory-mcp = codebase-memory-mcp.packages.${final.system}.default;
+            })
+          ];
         };
         modules = [ ./home/coralogix-macbook-pro.nix ];
         extraSpecialArgs = {

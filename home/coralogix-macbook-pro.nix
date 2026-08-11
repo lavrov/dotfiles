@@ -73,5 +73,6 @@
      # AI & LLM
      pkgs.opencode-desktop
      pkgs.jan
+     pkgs.codebase-memory-mcp
     ];
 }
