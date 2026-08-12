@@ -24,6 +24,13 @@
     };
   };
 
+  # Import local credentials/secrets into the login shell, if present.
+  programs.zsh.profileExtra = ''
+    if [ -f "$HOME/.credentials" ]; then
+      source "$HOME/.credentials"
+    fi
+  '';
+
   home.packages = [
 
     # utils
