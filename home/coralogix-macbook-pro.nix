@@ -10,6 +10,10 @@
   home.username = "coralogix";
   home.homeDirectory = "/Users/coralogix";
 
+  home.sessionPath = [
+    "$HOME/.cargo/bin"
+  ];
+
   programs.git = {
     enable = true;
     settings = {
