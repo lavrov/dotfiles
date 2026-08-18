@@ -35,6 +35,26 @@
         "type": "github"
       }
     },
+    "cx-cli": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1786970497,
+        "narHash": "sha256-M8Klfx3N3yuLI8zjW5v+UUOqy1yxbkQZoh+plE1LliE=",
+        "owner": "coralogix",
+        "repo": "cx-cli",
+        "rev": "ebfd190f4af9dab80f1c32505c634b39eb248083",
+        "type": "github"
+      },
+      "original": {
+        "owner": "coralogix",
+        "repo": "cx-cli",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -115,6 +135,7 @@
     "root": {
       "inputs": {
         "codebase-memory-mcp": "codebase-memory-mcp",
+        "cx-cli": "cx-cli",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "opencode": "opencode",
