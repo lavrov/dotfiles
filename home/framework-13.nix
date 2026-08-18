@@ -51,7 +51,13 @@
     };
   };
 
-  services.ollama.acceleration = "rocm";
+  services.ollama = {
+    enable = true;
+    acceleration = "rocm";
+    environmentVariables = {
+      OLLAMA_CONTEXT_LENGTH = "200000";
+    };
+  };
 
   home.packages = [
     pkgs.wireguard-tools
