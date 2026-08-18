@@ -2,7 +2,7 @@
 
 stdenv.mkDerivation {
   pname = "ollama-darwin";
-  version = "0.32.13";
+  version = "0.32.14";
 
   src = fetchzip {
     url = "https://ollama.com/download/Ollama-darwin.zip";
