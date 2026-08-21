@@ -6,7 +6,7 @@ stdenv.mkDerivation {
 
   src = fetchzip {
     url = "https://github.com/ollama/ollama/releases/download/v0.32.15/Ollama-darwin.zip";
-    sha256 = "bwHOMeY5AEN5RMbT0xbDT2xFRjp9SiWO0lOhcy4ObUI=";
+    sha256 = "im6/Z8lBZla/lYMR4hcccT0JV5xqaATtFCBSMvWcbuo=";
   };
 
   installPhase = ''
