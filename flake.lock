@@ -1,25 +1,5 @@
 {
   "nodes": {
-    "codebase-memory-mcp": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1787085599,
-        "narHash": "sha256-lPuayLN6W31zQ45UTQehP+tmoo/UrQJuRsJzi1wZ9Tg=",
-        "owner": "DeusData",
-        "repo": "codebase-memory-mcp",
-        "rev": "46ae198fc11cda80e817acbc5f5908d7c2de7032",
-        "type": "github"
-      },
-      "original": {
-        "owner": "DeusData",
-        "repo": "codebase-memory-mcp",
-        "type": "github"
-      }
-    },
     "crane": {
       "locked": {
         "lastModified": 1785541369,
@@ -42,11 +22,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787132596,
-        "narHash": "sha256-kXSUHTGi3nWcHqUH/lLfsl4g7FS7OONVZu1tynXRkHg=",
+        "lastModified": 1787237110,
+        "narHash": "sha256-SNtmQLedT34WaV4W7ZpeH3hOyRbcx8soCrJg+ckXsPI=",
         "owner": "coralogix",
         "repo": "cx-cli",
-        "rev": "cfaa96237d2d97c851505fedbdbe9f71b76a8649",
+        "rev": "c22fe9e16b3434667797f157c2fa896480d1d44d",
         "type": "github"
       },
       "original": {
@@ -62,11 +42,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786999651,
-        "narHash": "sha256-MTGMFlLDTklsXhCp4r5GXB4VAVadPdalXLvUjd/K7h0=",
+        "lastModified": 1787176219,
+        "narHash": "sha256-djoRr6jBpe35q/0JwAvXpFXg1Ktf+X54NU2RLR7wnHw=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "353742587cbaf079b3caee743115d037bc51fea6",
+        "rev": "c53d643b3737e2fcd04e6cb3b3580ef50b2087a0",
         "type": "github"
       },
       "original": {
@@ -77,11 +57,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1787070829,
-        "narHash": "sha256-vXNVDVtvfiQuXthP0NHPFdNvvMTkGpx0UP8oddIWbNk=",
+        "lastModified": 1787135253,
+        "narHash": "sha256-RD2kNWCG+Bjo6h+JVjWVNntZs2GtRoeY2xHjts/FNkA=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "0ae2bc1419c3f345984c2629e72e7a631820fa4d",
+        "rev": "ffb3c9b700e759be2ef13237c9d8f953b32a1e46",
         "type": "github"
       },
       "original": {
@@ -98,11 +78,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787121412,
-        "narHash": "sha256-+ruqIPCFibCep7hLhvCKrWJGl7yU8F+1Ou5OigQCJRY=",
+        "lastModified": 1787303003,
+        "narHash": "sha256-O9K5cPlkryAmsFJ8NVt4LBaOd8vRZvlyOopIP6veweE=",
         "owner": "anomalyco",
         "repo": "opencode",
-        "rev": "da4730e4a41dcbb2cb2d907dd2b06ac481b8f962",
+        "rev": "ba72a6ff2b62aaf614b8e745193e86a51be6142c",
         "type": "github"
       },
       "original": {
@@ -134,7 +114,6 @@
     },
     "root": {
       "inputs": {
-        "codebase-memory-mcp": "codebase-memory-mcp",
         "cx-cli": "cx-cli",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",

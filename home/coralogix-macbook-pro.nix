@@ -82,10 +82,9 @@
     pkgs.protofetch
     pkgs.cx-cli
 
-     # AI & LLM
-     pkgs.opencode-desktop
-     pkgs.jan
-     pkgs.codebase-memory-mcp
-     (pkgs.callPackage ./ollama-darwin.nix { })
+    # AI & LLM
+      pkgs.opencode-desktop
+      pkgs.jan
+      (pkgs.callPackage ./ollama-darwin.nix { })
     ];
 }
