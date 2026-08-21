@@ -2,11 +2,11 @@
 
 stdenv.mkDerivation {
   pname = "ollama-darwin";
-  version = "0.32.14";
+  version = "0.32.15";
 
   src = fetchzip {
-    url = "https://github.com/ollama/ollama/releases/download/v0.32.14/Ollama-darwin.zip";
-    sha256 = "1Cyq0vrxS13qRRsKWzvGoq0fJIkhYWQq6fAGFomqcaM=";
+    url = "https://github.com/ollama/ollama/releases/download/v0.32.15/Ollama-darwin.zip";
+    sha256 = "bwHOMeY5AEN5RMbT0xbDT2xFRjp9SiWO0lOhcy4ObUI=";
   };
 
   installPhase = ''
