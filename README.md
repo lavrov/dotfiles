@@ -18,3 +18,13 @@ Available configurations:
 - `coralogix@macbook-pro-1` (aarch64-darwin)
 - `vitaly@macbook-pro-1` (aarch64-darwin)
 - `vitaly@macbook-pro-2` (aarch64-darwin)
+
+## macOS: disable sleep (including on lid close)
+
+Not managed by Nix (requires root). Run manually on each machine where needed:
+
+    sudo pmset disablesleep 1
+
+To revert:
+
+    sudo pmset disablesleep 0
