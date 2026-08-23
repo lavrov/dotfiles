@@ -37,5 +37,9 @@
 
   # Managed as a launchd service via `darwin-common.nix`, which overrides
   # the package for all macOS configurations.
-  services.ollama.enable = true;
+  services.ollama = {
+    enable = true;
+    # Listen on all interfaces instead of just localhost.
+    host = "0.0.0.0";
+  };
 }
