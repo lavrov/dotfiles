@@ -4,6 +4,12 @@
 
   home.stateVersion = "26.05";
 
+  # directories
+  home.file = {
+    "workspace/.keep".text = "";
+    "workspace/github.com/.keep".text = "";
+  };
+
   # essentials
   programs = {
 
