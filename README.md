@@ -15,5 +15,6 @@ Codify everything!
 
 Available configurations:
 - `vitaly@framework-13` (x86_64-linux)
-- `coralogix` (aarch64-darwin)
-- `vitaly` (aarch64-darwin)
+- `coralogix@macbook-pro-1` (aarch64-darwin)
+- `vitaly@macbook-pro-1` (aarch64-darwin)
+- `vitaly@macbook-pro-2` (aarch64-darwin)

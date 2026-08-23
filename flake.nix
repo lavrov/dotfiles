@@ -21,34 +21,44 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, protofetch, opencode, cx-cli, ... }: {
-    homeConfigurations = {
-      "vitaly@framework-13" = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
-        modules = [ ./home/framework-13.nix ];
+  outputs = { nixpkgs, home-manager, protofetch, opencode, cx-cli, ... }:
+    let
+      darwinSystem = "aarch64-darwin";
+      darwinPkgs = import nixpkgs {
+        system = darwinSystem;
+        config.allowUnfree = true;
+        overlays = [ opencode.overlays.default ];
       };
-      "coralogix" = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs {
-          system = "aarch64-darwin";
-          config.allowUnfree = true;
-          overlays = [
-            opencode.overlays.default
-            (final: prev: {
-              cx-cli = cx-cli.packages.${final.system}.default;
-              protofetch = protofetch.packages.${final.system}.default;
-            })
-          ];
-        };
-        modules = [ ./home/coralogix-macbook-pro.nix ];
+      # Adds Coralogix-internal packages on top of the base darwin overlays.
+      coralogixDarwinPkgs = import nixpkgs {
+        system = darwinSystem;
+        config.allowUnfree = true;
+        overlays = [
+          opencode.overlays.default
+          (final: prev: {
+            cx-cli = cx-cli.packages.${final.system}.default;
+            protofetch = protofetch.packages.${final.system}.default;
+          })
+        ];
       };
-      "vitaly" = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs {
-          system = "aarch64-darwin";
-          config.allowUnfree = true;
-          overlays = [ opencode.overlays.default ];
+    in {
+      homeConfigurations = {
+        "vitaly@framework-13" = home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
+          modules = [ ./home/framework-13.nix ];
         };
-        modules = [ ./home/vitaly-macbook-pro.nix ];
+        "coralogix@macbook-pro-1" = home-manager.lib.homeManagerConfiguration {
+          pkgs = coralogixDarwinPkgs;
+          modules = [ ./home/coralogix-at-macbook-pro-1.nix ];
+        };
+        "vitaly@macbook-pro-1" = home-manager.lib.homeManagerConfiguration {
+          pkgs = darwinPkgs;
+          modules = [ ./home/vitaly-at-macbook-pro-1.nix ];
+        };
+        "vitaly@macbook-pro-2" = home-manager.lib.homeManagerConfiguration {
+          pkgs = coralogixDarwinPkgs;
+          modules = [ ./home/vitaly-macbook-pro-2.nix ];
+        };
       };
     };
-  };
 }
