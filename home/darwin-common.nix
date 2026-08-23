@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+  # Put the nix-darwin system profile (e.g. `darwin-rebuild`, `tailscale`)
+  # on PATH. Managed here rather than via nix-darwin's `programs.zsh`
+  # because home-manager owns the zsh configuration.
+  home.sessionPath = [ "/run/current-system/sw/bin" ];
+
   # Use the official macOS build (with MLX support) instead of the nixpkgs
   # `ollama` package whenever `services.ollama` is enabled.
   services.ollama.package = pkgs.callPackage ./ollama-darwin.nix { };

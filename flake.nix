@@ -19,9 +19,13 @@
       url = "github:coralogix/cx-cli";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-darwin = {
+      url = "github:nix-darwin/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, protofetch, opencode, cx-cli, ... }:
+  outputs = { nixpkgs, home-manager, protofetch, opencode, cx-cli, nix-darwin, ... }:
     let
       darwinSystem = "aarch64-darwin";
       darwinPkgs = import nixpkgs {
@@ -58,6 +62,17 @@
         "vitaly@macbook-pro-2" = home-manager.lib.homeManagerConfiguration {
           pkgs = coralogixDarwinPkgs;
           modules = [ ./home/vitaly-macbook-pro-2.nix ];
+        };
+      };
+
+      darwinConfigurations = {
+        "macbook-pro-1" = nix-darwin.lib.darwinSystem {
+          system = darwinSystem;
+          modules = [ ./darwin/macbook-pro-1.nix ];
+        };
+        "macbook-pro-2" = nix-darwin.lib.darwinSystem {
+          system = darwinSystem;
+          modules = [ ./darwin/macbook-pro-2.nix ];
         };
       };
     };
