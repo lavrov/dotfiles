@@ -35,6 +35,10 @@
     fi
   '';
 
+  # Managed as a launchd service via `darwin-common.nix`, which overrides
+  # the package for all macOS configurations.
+  services.ollama.enable = true;
+
   home.packages = [
 
     # utils
@@ -85,6 +89,5 @@
     # AI & LLM
       pkgs.opencode-desktop
       pkgs.jan
-      (pkgs.callPackage ./ollama-darwin.nix { })
     ];
 }

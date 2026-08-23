@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  # Use the official macOS build (with MLX support) instead of the nixpkgs
+  # `ollama` package whenever `services.ollama` is enabled.
+  services.ollama.package = pkgs.callPackage ./ollama-darwin.nix { };
+
   programs.ghostty = {
     package = pkgs.ghostty-bin;
     enableZshIntegration = true;
