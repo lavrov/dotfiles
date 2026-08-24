@@ -7,8 +7,8 @@
     ./darwin-common.nix
   ];
 
-  home.username = "vitaly";
-  home.homeDirectory = "/Users/vitaly";
+  home.username = "vitaly.lavrov";
+  home.homeDirectory = "/Users/vitaly.lavrov";
 
   home.sessionPath = [
     "$HOME/.cargo/bin"
@@ -42,4 +42,8 @@
     # Listen on all interfaces instead of just localhost.
     host = "0.0.0.0";
   };
+
+  # Headless opencode server (launchd agent), for remote access from
+  # OpenCode Desktop, `opencode attach`, or the browser UI.
+  programs.opencode.web.enable = true;
 }

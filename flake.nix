@@ -59,9 +59,9 @@
           pkgs = darwinPkgs;
           modules = [ ./home/vitaly-at-macbook-pro-1.nix ];
         };
-        "vitaly@macbook-pro-2" = home-manager.lib.homeManagerConfiguration {
+        "vitaly.lavrov" = home-manager.lib.homeManagerConfiguration {
           pkgs = coralogixDarwinPkgs;
-          modules = [ ./home/vitaly-macbook-pro-2.nix ];
+          modules = [ ./home/vitaly-lavrov-at-macbook-pro-2.nix ];
         };
       };
 
