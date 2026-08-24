@@ -60,6 +60,7 @@
         ProgramArguments = [
           (lib.getExe' pkgs.tailscale "tailscale")
           "serve"
+          "--http=11434"
           "11434"
         ];
         RunAtLoad = true;
