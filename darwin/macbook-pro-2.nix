@@ -12,7 +12,7 @@
   services.openssh = {
     enable = true;
     extraConfig = ''
-      ListenAddress 100.87.5.74
+      ListenAddress 100.121.243.86
       PasswordAuthentication no
       PermitRootLogin no
     '';

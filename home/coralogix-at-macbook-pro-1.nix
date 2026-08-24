@@ -39,6 +39,19 @@
   # the package for all macOS configurations.
   services.ollama.enable = true;
 
+  # Forward the local SSH agent (GPG-backed) to macbook-pro-2 so the same
+  # key works for git and other SSH operations from that machine.
+  programs.ssh = {
+    enable = true;
+    enableDefaultConfig = false;
+    settings = {
+      "100.121.243.86" = {
+        forwardAgent = true;
+        user = "vitaly.lavrov";
+      };
+    };
+  };
+
   home.packages = [
 
     # utils
