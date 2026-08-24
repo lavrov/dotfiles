@@ -69,6 +69,8 @@
           SuccessfulExit = false;
         };
         ProcessType = "Background";
+        StandardOutPath = "${config.home.homeDirectory}/Library/Logs/tailscale-serve-ollama.log";
+        StandardErrorPath = "${config.home.homeDirectory}/Library/Logs/tailscale-serve-ollama.log";
       };
     };
 
@@ -87,6 +89,8 @@
           SuccessfulExit = false;
         };
         ProcessType = "Background";
+        StandardOutPath = "${config.home.homeDirectory}/Library/Logs/tailscale-serve-opencode.log";
+        StandardErrorPath = "${config.home.homeDirectory}/Library/Logs/tailscale-serve-opencode.log";
       };
     };
   };
