@@ -17,7 +17,7 @@ Available configurations:
 - `vitaly@framework-13` (x86_64-linux)
 - `coralogix@macbook-pro-1` (aarch64-darwin)
 - `vitaly@macbook-pro-1` (aarch64-darwin)
-- `vitaly@macbook-pro-2` (aarch64-darwin)
+- `vitaly.lavrov` (aarch64-darwin, macbook-pro-2)
 
 ## macOS: system configuration (nix-darwin)
 
