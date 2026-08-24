@@ -3,5 +3,5 @@
 {
   imports = [ ./common.nix ];
 
-  networking.localHostName = "macbook-pro-1";
+  networking.hostName = "macbook-pro-1";
 }
