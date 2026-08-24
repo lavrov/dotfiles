@@ -12,7 +12,7 @@
   services.openssh = {
     enable = true;
     extraConfig = ''
-      ListenAddress 100.121.243.86
+      ListenAddress macbook-pro-2
       PasswordAuthentication no
       PermitRootLogin no
     '';
