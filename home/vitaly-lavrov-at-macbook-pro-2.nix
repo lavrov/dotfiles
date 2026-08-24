@@ -38,6 +38,10 @@
   # Managed as a launchd service via `darwin-common.nix`, which overrides
   # the package for all macOS configurations.
   services.ollama.enable = true;
+  launchd.agents.ollama.config = {
+    StandardOutPath = "${config.home.homeDirectory}/Library/Logs/ollama.log";
+    StandardErrorPath = "${config.home.homeDirectory}/Library/Logs/ollama.log";
+  };
 
   # Headless opencode server (launchd agent), for remote access from
   # OpenCode Desktop, `opencode attach`, or the browser UI.
