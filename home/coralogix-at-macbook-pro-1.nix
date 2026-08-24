@@ -45,7 +45,7 @@
     enable = true;
     enableDefaultConfig = false;
     settings = {
-      "100.121.243.86" = {
+      "macbook-pro-2" = {
         forwardAgent = true;
         user = "vitaly.lavrov";
       };
