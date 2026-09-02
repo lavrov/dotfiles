@@ -37,7 +37,12 @@
 
   # Managed as a launchd service via `darwin-common.nix`, which overrides
   # the package for all macOS configurations.
-  services.ollama.enable = true;
+  services.ollama = {
+    enable = true;
+    environmentVariables = {
+      OLLAMA_CONTEXT_LENGTH = "65536";
+    };
+  };
 
   # Forward the local SSH agent (GPG-backed) to macbook-pro-2 so the same
   # key works for git and other SSH operations from that machine.
