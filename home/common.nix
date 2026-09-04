@@ -4,6 +4,8 @@
 
   home.stateVersion = "26.05";
 
+  home.sessionPath = [ "$HOME/.local/bin" ];
+
   # directories
   home.file = {
     "workspace/.keep".text = "";
