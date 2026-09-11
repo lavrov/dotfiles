@@ -28,10 +28,17 @@
   outputs = { nixpkgs, home-manager, protofetch, opencode, cx-cli, nix-darwin, ... }:
     let
       darwinSystem = "aarch64-darwin";
+      # opencode-desktop pins electron_41, which nixpkgs marks insecure (EOL).
+      # Rebuild it against a supported Electron release instead.
+      opencodeDesktopElectronOverlay = final: prev: {
+        opencode-desktop = prev.opencode-desktop.override {
+          electron_41 = final.electron_43;
+        };
+      };
       darwinPkgs = import nixpkgs {
         system = darwinSystem;
         config.allowUnfree = true;
-        overlays = [ opencode.overlays.default ];
+        overlays = [ opencode.overlays.default opencodeDesktopElectronOverlay ];
       };
       # Adds Coralogix-internal packages on top of the base darwin overlays.
       coralogixDarwinPkgs = import nixpkgs {
@@ -39,6 +46,7 @@
         config.allowUnfree = true;
         overlays = [
           opencode.overlays.default
+          opencodeDesktopElectronOverlay
           (final: prev: {
             cx-cli = cx-cli.packages.${final.system}.default;
             protofetch = protofetch.packages.${final.system}.default;
