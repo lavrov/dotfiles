@@ -104,10 +104,6 @@
         vim.keymap.set('n', ';', ':', {})
       '';
     };
-
-    zed-editor = {
-      enable = false;
-    };
   };
 
   # desktop

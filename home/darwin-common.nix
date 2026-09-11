@@ -23,4 +23,8 @@
       theme = "GitHub Light Default";
     };
   };
+
+  programs.zed-editor = {
+    enable = true;
+  };
 }
