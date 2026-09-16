@@ -88,6 +88,9 @@
     pkgs.jetbrains.idea
     pkgs.jetbrains-toolbox
 
+    # terminal
+    (pkgs.callPackage ./cmux-darwin.nix { })
+
     # dev tools
     pkgs.teleport
     pkgs.kubectl
