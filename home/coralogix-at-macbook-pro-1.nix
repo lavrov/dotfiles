@@ -86,6 +86,7 @@
 
     # editors & IDEs
     pkgs.jetbrains.idea
+    pkgs.jetbrains-toolbox
 
     # dev tools
     pkgs.teleport
