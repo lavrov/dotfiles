@@ -35,18 +35,20 @@
           electron_41 = final.electron_43;
         };
       };
+      opencodeOverlays = [
+        opencode.overlays.default
+        opencodeDesktopElectronOverlay
+      ];
       darwinPkgs = import nixpkgs {
         system = darwinSystem;
         config.allowUnfree = true;
-        overlays = [ opencode.overlays.default opencodeDesktopElectronOverlay ];
+        overlays = opencodeOverlays;
       };
       # Adds Coralogix-internal packages on top of the base darwin overlays.
       coralogixDarwinPkgs = import nixpkgs {
         system = darwinSystem;
         config.allowUnfree = true;
-        overlays = [
-          opencode.overlays.default
-          opencodeDesktopElectronOverlay
+        overlays = opencodeOverlays ++ [
           (final: prev: {
             cx-cli = cx-cli.packages.${final.system}.default;
             protofetch = protofetch.packages.${final.system}.default;
