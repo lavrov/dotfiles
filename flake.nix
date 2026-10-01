@@ -13,7 +13,6 @@
     };
     opencode = {
       url = "github:anomalyco/opencode";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     cx-cli = {
       url = "github:coralogix/cx-cli";
