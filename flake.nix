@@ -12,7 +12,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     opencode = {
-      url = "github:anomalyco/opencode";
+      url = "github:anomalyco/opencode/v2";
     };
     cx-cli = {
       url = "github:coralogix/cx-cli";
@@ -27,17 +27,7 @@
   outputs = { nixpkgs, home-manager, protofetch, opencode, cx-cli, nix-darwin, ... }:
     let
       darwinSystem = "aarch64-darwin";
-      # opencode-desktop pins electron_41, which nixpkgs marks insecure (EOL).
-      # Rebuild it against a supported Electron release instead.
-      opencodeDesktopElectronOverlay = final: prev: {
-        opencode-desktop = prev.opencode-desktop.override {
-          electron_41 = final.electron_43;
-        };
-      };
-      opencodeOverlays = [
-        opencode.overlays.default
-        opencodeDesktopElectronOverlay
-      ];
+      opencodeOverlays = [ opencode.overlays.default ];
       darwinPkgs = import nixpkgs {
         system = darwinSystem;
         config.allowUnfree = true;
