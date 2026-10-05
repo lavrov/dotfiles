@@ -27,7 +27,21 @@
   outputs = { nixpkgs, home-manager, protofetch, opencode, cx-cli, nix-darwin, ... }:
     let
       darwinSystem = "aarch64-darwin";
-      opencodeOverlays = [ opencode.overlays.default ];
+      opencodeOverlays = [
+        opencode.overlays.default
+        # Upstream nix sets OPENCODE_CHANNEL=prod, which the CLI does not know as a
+        # release channel: it registers its service in service-prod.json while the
+        # desktop looks in service.json, so the desktop times out waiting for it.
+        # The desktop build maps "latest" to its prod identity.
+        # Related: https://github.com/anomalyco/opencode/issues/52122 (same
+        # OPENCODE_CHANNEL=prod setting also arms the desktop auto-updater).
+        (final: prev: {
+          opencode = prev.opencode.overrideAttrs (old: {
+            env = old.env // { OPENCODE_CHANNEL = "latest"; };
+          });
+          opencode-desktop = prev.opencode-desktop.override { opencode = final.opencode; };
+        })
+      ];
       darwinPkgs = import nixpkgs {
         system = darwinSystem;
         config.allowUnfree = true;
