@@ -79,6 +79,9 @@
 
     mistral-vibe = {
       enable = true;
+      settings = {
+        theme = "auto";
+      };
     };
   };
 

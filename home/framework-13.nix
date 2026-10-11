@@ -53,5 +53,9 @@
 
   home.packages = [
     pkgs.protonmail-desktop
+
+    # dev tools
+    pkgs.kubectl
+    pkgs.kubectx
   ];
 }
