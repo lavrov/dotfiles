@@ -14,7 +14,7 @@
 
   programs = {
     # Let Home Manager install and manage itself.
-    home-manager.enable = true;
+    home-manager.enable = false;
     firefox = {
       enable = true;
       policies = {
@@ -51,17 +51,7 @@
     };
   };
 
-  services.ollama = {
-    enable = true;
-    acceleration = "rocm";
-    environmentVariables = {
-      OLLAMA_CONTEXT_LENGTH = "200000";
-    };
-  };
-
   home.packages = [
-    pkgs.wireguard-tools
-    pkgs.jetbrains.idea-oss
     pkgs.protonmail-desktop
   ];
 }

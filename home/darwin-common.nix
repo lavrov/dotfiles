@@ -10,6 +10,7 @@
   # `ollama` package whenever `services.ollama` is enabled.
   services.ollama.package = pkgs.callPackage ./ollama-darwin.nix { };
 
+  programs.home-manager.enable = true;
   programs.ghostty = {
     package = pkgs.ghostty-bin;
     enableZshIntegration = true;
