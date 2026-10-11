@@ -76,6 +76,10 @@
     direnv = {
       enable = true;
     };
+
+    mistral-vibe = {
+      enable = true;
+    };
   };
 
   services = {

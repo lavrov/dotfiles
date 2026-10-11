@@ -22,9 +22,13 @@
       url = "github:nix-darwin/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    mistral-vibe = {
+      url = "github:mistralai/mistral-vibe";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, protofetch, opencode, cx-cli, nix-darwin, ... }:
+  outputs = { nixpkgs, home-manager, protofetch, opencode, cx-cli, nix-darwin, mistral-vibe, ... }:
     let
       darwinSystem = "aarch64-darwin";
       opencodeOverlays = [
@@ -42,6 +46,15 @@
           opencode-desktop = prev.opencode-desktop.override { opencode = final.opencode; };
         })
       ];
+      linuxPkgs = import nixpkgs {
+        system = "x86_64-linux";
+        config.allowUnfree = true;
+        overlays = [
+	  (final: prev: {
+	    mistral-vibe = mistral-vibe.packages.${final.system}.default;
+	  })
+	];
+      };
       darwinPkgs = import nixpkgs {
         system = darwinSystem;
         config.allowUnfree = true;
@@ -61,7 +74,7 @@
     in {
       homeConfigurations = {
         "vitaly@framework-13" = home-manager.lib.homeManagerConfiguration {
-          pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
+          pkgs = linuxPkgs;
           modules = [ ./home/framework-13.nix ];
         };
         "coralogix@macbook-pro-1" = home-manager.lib.homeManagerConfiguration {
