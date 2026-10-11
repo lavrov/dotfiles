@@ -27,6 +27,11 @@
         "firefox"
       ];
     };
+    ghostty = {
+      settings = {
+        command = "${pkgs.zsh}/bin/zsh -l";
+      };
+    };
   };
 
   # Remove SSH_AUTH_SOCK before home-manager will attempt to set it
