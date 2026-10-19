@@ -3,6 +3,8 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # NixOS system builds against stable; home-manager stays on unstable.
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -28,7 +30,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, protofetch, opencode, cx-cli, nix-darwin, mistral-vibe, ... }:
+  outputs = { nixpkgs, nixpkgs-stable, home-manager, protofetch, opencode, cx-cli, nix-darwin, mistral-vibe, ... }:
     let
       darwinSystem = "aarch64-darwin";
       opencodeOverlays = [
@@ -89,6 +91,11 @@
           pkgs = coralogixDarwinPkgs;
           modules = [ ./home/vitaly-lavrov-at-macbook-pro-2.nix ];
         };
+      };
+
+      nixosConfigurations."framework-13" = nixpkgs-stable.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [ ./nixos/framework-13.nix ];
       };
 
       darwinConfigurations = {

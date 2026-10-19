@@ -19,6 +19,22 @@ Available configurations:
 - `vitaly@macbook-pro-1` (aarch64-darwin)
 - `vitaly.lavrov` (aarch64-darwin, macbook-pro-2)
 
+## Linux: system configuration (NixOS)
+
+framework-13 runs NixOS; the system configuration lives in `nixos/` and is
+pinned to the `nixpkgs-stable` input (26.05). Home Manager stays standalone
+on the `nixpkgs` input (unstable). The hardware scan is committed as
+`nixos/framework-13-hardware.nix`; if `nixos-generate-config` ever
+regenerates `/etc/nixos/hardware-configuration.nix`, copy it over.
+
+To switch:
+
+    sudo nixos-rebuild switch --flake .#framework-13
+
+To preview changes without activating:
+
+    sudo nixos-rebuild dry-activate --flake .#framework-13
+
 ## macOS: system configuration (nix-darwin)
 
 macOS system-level settings (currently: Tailscale) are managed separately via
