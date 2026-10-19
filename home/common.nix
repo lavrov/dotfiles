@@ -81,6 +81,11 @@
       enable = true;
       settings = {
         theme = "auto";
+        connectors = [
+          { name = "notion"; disabled = true; }
+          { name = "google_calendar"; disabled = true; }
+        ];
+        tools.firefox_press_key.permission = "always";
       };
     };
   };
