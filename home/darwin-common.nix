@@ -15,6 +15,14 @@
   ];
 
   programs.home-manager.enable = true;
+
+  # Firefox itself is installed by hand from Mozilla's signed DMG into
+  # /Applications: since macOS 27 only Mozilla-signed builds may open
+  # ~/Library/Application Support/Firefox, and the nixpkgs build is unsigned.
+  # home-manager still applies `programs.firefox.policies` (through macOS
+  # defaults) and the browserpass native messaging host.
+  programs.firefox.package = null;
+
   programs.ghostty = {
     package = pkgs.ghostty-bin;
     enableZshIntegration = true;
