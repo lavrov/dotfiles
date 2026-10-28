@@ -1,5 +1,17 @@
 { config, pkgs, ... }:
 
+let
+  # nvm is no longer packaged in nixpkgs or home-manager: pin the upstream
+  # release and source it from zsh. The Nix store is read-only, so nvm keeps
+  # installing Node versions into its own writable NVM_DIR (~/.nvm).
+  nvm = pkgs.fetchFromGitHub {
+    owner = "nvm-sh";
+    repo = "nvm";
+    rev = "v0.40.8";
+    hash = "sha256-24FP1brAAyWu+Q0Dk+Y4aXgdCBon9GkBXgFaGXBO7sc=";
+  };
+in
+
 {
   # Put the nix-darwin system profile (e.g. `darwin-rebuild`, `tailscale`)
   # on PATH. Managed here rather than via nix-darwin's `programs.zsh`
@@ -40,4 +52,9 @@
   programs.zed-editor = {
     enable = true;
   };
+
+  programs.zsh.initContent = ''
+    export NVM_DIR="$HOME/.nvm"
+    source ${nvm}/nvm.sh
+  '';
 }

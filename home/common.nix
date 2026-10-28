@@ -78,7 +78,9 @@
     };
 
     mistral-vibe = {
-      enable = true;
+      # Disabled for now: the v3.0.1 package fails its bundled test suite
+      # (httpx auth API mismatch) and blocks every home-manager build.
+      enable = false;
       settings = {
         theme = "auto";
         connectors = [
